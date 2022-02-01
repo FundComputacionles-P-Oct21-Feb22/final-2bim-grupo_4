@@ -111,7 +111,7 @@
 108.	pais, x(100)[(A-Z),(a-z),(BS)]
 109.	idioma, x(100)[(A-Z),(a-z),(BS)]
 110.	correo, x(100)[(A-Z),(a-z),(BS)]
-111.	cadena, x(100)[(A-Z),(a-z),(BS)]
+111.	cadena, x(100)[(A-Z),(a-z),(BS)]<--""
 
 112.	<<"Ingrese el nombre del usuario: "
 113.	>>nombreU
@@ -130,7 +130,7 @@
 126.	<<"ingrese el correo electrónico del usuario: "
 127.	>>correo
 
-128.	cadena<--"Resumen de datos:"+"\n"
+128.	cadena<--"Resumen de cuenta creada:"+"\n"
 129.	cadena<--cadena+"Usuario:"+nombreU+"\n"+"Nombres:"+nombres+"\n"+"Apellidos:+apellidos+"\n"+"Edad:"+edad+"\n"
 		+"Ciudad de residencia:"+ciudad+"\n"+"Pais de residencia:"+pais+"\n"+"Idioma:"+ idioma+"\n"+"Correo electrónico:"+correo+"\n"
 130.	<<cadena
@@ -167,7 +167,7 @@
 159.	ciudad, x(100)[(A-Z),(a-z),(BS)]
 160.	pais, x(100)[(A-Z),(a-z),(BS)]
 161.	hobby, x(100)[(A-Z),(a-z),(BS)]
-162.	cadena, x(100)[(A-Z),(a-z),(BS)]
+162.	cadena, x(100)[(A-Z),(a-z),(BS)]<--""
 
 163.	<<"Ingrese el nombre del usuario: "
 164.	>>nombreU
@@ -181,7 +181,7 @@
 172.	>>hobby
 	
 
-173.	cadena<--"Resumen de datos:"+"\n"
+173.	cadena<--"Resumen de cuenta creada:"+"\n"
 174.	cadena<--cadena+"Usuario:"+nombreU+"\n"+"Número de teléfono:"+numero+"\n"+"Ciudad de residencia:"+ciudad+
 175.		"\n"+"Pais de residencia:"+pais+"\n"+"Hobby favorito:"+hobby+"\n"
 176.	<<cadena
@@ -204,7 +204,7 @@
 192.	>> pais
 193.	<< Ingrese su hobby preferido
 194.	>> hobby
-195.	cadena <-- cadena + Resumen de cuenta creada: + "\n" + 
+195.	cadena <-- cadena + "Resumen de cuenta creada:" + "\n" + 
 196.		   Creando Signal+ "\n"
 197.		   Usuario: + nombre + "\n"
 198.		   Número de telefono: + numeroTelefono + "\n"
@@ -219,7 +219,7 @@
 206.	ciudad, x(100)[(A-Z),(a-z),(BS)]
 207.	edad, x(3)[(A-Z),(a-z),(BS)]
 208.	correo, x(100)[(A-Z),(a-z),(BS)]
-209.	cadena, x(100)[(A-Z),(a-z),(BS)]
+209.	cadena, x(100)[(A-Z),(a-z),(BS)]<--""
 210.
 211.	<<"Ingrese el nombre del usuario: "
 212.	>>nombreU
@@ -229,7 +229,7 @@
 216.	>>edad
 217.	<<"Ingrese el correo electrónico del usuario: "
 
-218.	cadena<--"Resumen de datos:"+"\n"
+218.	cadena<--"Resumen de cuenta creada:"+"\n"
 219.	cadena<--cadena+"Usuario:"+nombreU+"\n"+"Ciudad de residencia:"+ciudad+
 220.		"\n"+"Edad:"+edad+"\n"+"Correo electrónico:"+correp+"\n"
 221.	<<cadena
