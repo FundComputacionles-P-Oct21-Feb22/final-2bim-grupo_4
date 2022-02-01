@@ -1,0 +1,252 @@
+1.Inicio
+
+2.funcion Principal()
+
+3.boolean bandera <--- True
+4.contador, i[0-n] <-- 0
+5.eleccion, i[0-m]
+6.(mensajeFinal(3),x(100)[(A-Z),(a-z),(BS)])
+7.mensajeFinal = ["Campaña con poca afluencia", "Campaña moderada siga adelante", "Excelente campaña"]
+
+8.Mientras(bandera)
+9.	<< Ingrese 1 si desea crear un cuenta de Facebook + "\n" + 
+10.	   Ingrese 2 si desea crear un cuenta de Twitter + "\n" + 
+11.	   Ingrese 3 si desea crear un cuenta de Whatsapp + "\n" + 
+12.	   Ingrese 4 si desea crear una cuentade Telegram + "\n" + 
+13.	   Ingrese 5 si desea crear una cuenta de Signa l+ "\n" +
+14.	   Ingrese 6 si desea crear una cuenta de Instagram + "\n" +
+15.	   Ingrese 7 si dese crear una cuenta de Flickr + "\n" + 
+16.	   Ingrese 0 para salir dejar de crear cuentas\n
+17.	>> eleccion
+18.	Si (eleccion = 1) entonces
+19.		f = crearFacebook().
+20.		<< f
+21.	De lo contrario 
+22.		Si(eleccion == 2) entonces
+23.		crearTwitter()
+24.		De lo contrario
+25.			Si(eleccion == 3) entonces
+26.				w = crearWhatsapp()
+27.				<< w
+28.			De lo contrario 
+29.				Si (eleccion == 4) entonces
+30.					crearTelegram()
+31.				De lo contraio 
+32.					Si (eleccion == 5) entonces
+33.						s = crearSignal()
+34.						<< s
+35.					De lo contrario 
+36.						Si (eleccion == 6) entonces
+37.							fl, 
+38.						De lo contraio 
+39.							Si (eleccion == 7) entonces
+40.								fl = crearFlickr()
+41.								<< fl
+42.							De lo contrario
+43.								Si (elecccion < 0 || eleccion > 7) entonces
+44.									bandera = False
+45.									<< Valores introducidos fuera de rango
+46.								De lo contrario
+47.									Si (eleccion == 0) entonces
+48.										bandera = False
+49.									<< Proceso de creaccion de cuentas finalizado + "\n" + Numero de cuentas creadas: + contador
+50.										Si(contador >=1 && contador<=5) entonces
+51.											<< mensajeFinal[0]
+52.										De lo contrario
+53.											Si (contador >=6 && contador<=15) entonces
+54.												<< mensajeFinal[1]
+55.											De lo contrario
+56.												Si (contador >= 16) entonces
+57.													<< mensajeFinal[2]
+58.
+59.												Fin Si
+60.											Fin Si
+61.										Fin Si
+62.									Fin Si
+63.contador = contador + 1
+64.								Fin Si
+65.							Fin Si
+66.						Fin Si
+67.					Fin Si
+68.				Fin Si
+69.			Fin Si
+70.		Fin Si
+71.	Fin Si
+72.									
+73.Fin funcion principal
+
+74.funcion crearFacebook(): x
+75.	nombre, x(100)[(A-Z),(a-z),(BS)]
+76.	edad, x(3)[(A-Z),(a-z),(0-150),(BS)]
+77.	ciudad, x(100)[(A-Z),(a-z),(BS)]
+78.	pais, x(100)[(A-Z),(a-z),(BS)]
+79.	correo, x(100)[(A-Z),(a-z),(BS)]
+80.	cadena, x(100)[(A-Z),(a-z),(BS)] <-- ""
+81.	<< Ingrese el nombre del usuario:
+82.	>> nombre
+83.	<< Ingrese su edad: 
+84.	>> edad
+85.	<< Ingrese la ciudad donde reside el usuario: 
+86.	>> ciudad
+88.	<< Ingrese el pais donde reside el usuario: 
+89.	>> pais
+90.	<< Ingrese el correo electrónico del usuario:
+91.	>> correo
+92.	cadena <-- cadena + Resumen de cuenta creada: + "\n" + 
+93.		   Creando Facebook + "\n"
+94.		   Usuario: + nombre + "\n"
+95.		   Edad: + edad + "\n"
+96.		   Ciudad de residencia: + ciudad + "\n"
+98.		   Pais de residencia: + pais + "\n"
+99.		   Correo electrónico: + correo + "\n"
+100.	retorna cadena
+101.fin funcion crearFacebook
+
+102.funcion crearTwitter()
+103.	nombreU, x(100)[(A-Z),(a-z),(BS)]
+104.	nombres, x(100)[(A-Z),(a-z),(BS)]
+105.	apellidos, x(100)[(A-Z),(a-z),(BS)]
+106.	edad, x(3)[(A-Z),(a-z),(BS)]
+107.	ciudad, x(100)[(A-Z),(a-z),(BS)]
+108.	pais, x(100)[(A-Z),(a-z),(BS)]
+109.	idioma, x(100)[(A-Z),(a-z),(BS)]
+110.	correo, x(100)[(A-Z),(a-z),(BS)]
+111.	cadena, x(100)[(A-Z),(a-z),(BS)]
+
+112.	<<"Ingrese el nombre del usuario: "
+113.	>>nombreU
+114.	<<"Ingrese sus nombres completos: "
+115.	>>nombres
+116.	<<"Ingrese sus apellidos completos: "
+117.	>>apellidos
+118.	<<"Ingrese la edad del usuario: "
+119.	>>edad
+120.	<<"Ingrese la ciudad donde reside el usuario: "
+121.	>>ciudad
+122.	<<"Ingrse el pais donde reside el usuario: "
+123.	>>pais
+124.	<<"Ingrese su idioma nativo: "
+125.	>>idioma
+126.	<<"ingrese el correo electrónico del usuario: "
+127.	>>correo
+
+128.	cadena<--"Resumen de datos:"+"\n"
+129.	cadena<--cadena+"Usuario:"+nombreU+"\n"+"Nombres:"+nombres+"\n"+"Apellidos:+apellidos+"\n"+"Edad:"+edad+"\n"
+		+"Ciudad de residencia:"+ciudad+"\n"+"Pais de residencia:"+pais+"\n"+"Idioma:"+ idioma+"\n"+"Correo electrónico:"+correo+"\n"
+130.	<<cadena
+131.fin funcion crearTwitter
+
+132.funcion crearWhatsaap(): x
+133.	nombre, x(100)[(A-Z),(a-z),(BS)]
+134.	numeroTelefono, x(100)[(A-Z),(a-z),(0-100),(BS)]
+135.	edad, x(3)[(A-Z),(a-z),(0-150),(BS)]
+136.	ciudad, x(100)[(A-Z),(a-z),(BS)]
+137.	pais, x(100)[(A-Z),(a-z),(BS)]
+138.	cadena, x(100)[(A-Z),(a-z),(BS)] <-- ""
+139.	<< Ingrese el nombre del usuario:
+140.	>> nombre
+141.	<< Ingrese su número de telefono: 
+142.	>> numeroTelefono
+143.	<< Ingrese la ciudad donde reside el usuario: 
+144.	>> ciudad
+145.	<< Ingrese el pais donde reside el usuario: 
+146.	>> pais
+147.	cadena <-- cadena + Resumen de cuenta creada: + "\n" + 
+148.		   Creando Whatsaap+ "\n"
+149.		   Usuario: + nombre + "\n"
+150.		   Número de telefono: + numeroTelefono + "\n"
+151.		   Edad: + edad + "\n"
+152.		   Ciudad de residencia: + ciudad + "\n"
+153.		   Pais de residencia: + pais + "\n"
+154.	retorna cadena
+155.fin funcion crearWhatsaap
+
+156.funcion crearTelegram()
+157.	nombreU, x(100)[(A-Z),(a-z),(BS)]
+158.	numero, x(10)[(A-Z),(a-z),(BS)]
+159.	ciudad, x(100)[(A-Z),(a-z),(BS)]
+160.	pais, x(100)[(A-Z),(a-z),(BS)]
+161.	hobby, x(100)[(A-Z),(a-z),(BS)]
+162.	cadena, x(100)[(A-Z),(a-z),(BS)]
+
+163.	<<"Ingrese el nombre del usuario: "
+164.	>>nombreU
+165.	>>"Ingrese el número de teléfono del usuario: "
+166.	>>numero
+167.	<<"Ingrese la ciudad donde reside el usuario: "
+168.	>>ciudad
+169.	<<"Ingrse el pais donde reside el usuario: "
+170.	>>pais
+171.	<<"Ingrese el hobby faborito del usuario: "
+172.	>>hobby
+	
+
+173.	cadena<--"Resumen de datos:"+"\n"
+174.	cadena<--cadena+"Usuario:"+nombreU+"\n"+"Número de teléfono:"+numero+"\n"+"Ciudad de residencia:"+ciudad+
+175.		"\n"+"Pais de residencia:"+pais+"\n"+"Hobby favorito:"+hobby+"\n"
+176.	<<cadena
+177.fin funcion crearTelegram
+
+178.funcion crearSignal(): x
+179.	nombre, x(100)[(A-Z),(a-z),(BS)]
+180.	numeroTelefono, x(100)[(A-Z),(a-z),(0-100),(BS)]
+181.	ciudad, x(100)[(A-Z),(a-z),(BS)]
+182.	pais, x(100)[(A-Z),(a-z),(BS)]
+183.	hobby, x(100)[(A-Z),(a-z),(BS)]
+184.	cadena, x(100)[(A-Z),(a-z),(BS)] <-- ""
+185.	<< Ingrese el nombre del usuario:
+186.	>> nombre
+187.	<< Ingrese su número de telefono: 
+188.	>> numeroTelefono
+189.	<< Ingrese la ciudad donde reside el usuario: 
+190.	>> ciudad
+191.	<< Ingrese el pais donde reside el usuario: 
+192.	>> pais
+193.	<< Ingrese su hobby preferido
+194.	>> hobby
+195.	cadena <-- cadena + Resumen de cuenta creada: + "\n" + 
+196.		   Creando Signal+ "\n"
+197.		   Usuario: + nombre + "\n"
+198.		   Número de telefono: + numeroTelefono + "\n"
+199.		   Ciudad de residencia: + ciudad + "\n"
+200.		   Pais de residencia: + pais + "\n"
+201.		   Hobby Principal: + hobby + "\n"
+202.	retorna cadena
+203.fin funcion crearSignal
+
+204.funcion crearInstagram()
+205.	nombreU, x(100)[(A-Z),(a-z),(BS)]
+206.	ciudad, x(100)[(A-Z),(a-z),(BS)]
+207.	edad, x(3)[(A-Z),(a-z),(BS)]
+208.	correo, x(100)[(A-Z),(a-z),(BS)]
+209.	cadena, x(100)[(A-Z),(a-z),(BS)]
+210.
+211.	<<"Ingrese el nombre del usuario: "
+212.	>>nombreU
+213.	<<"Ingrese la ciudad donde reside el usuario: "
+214.	>>ciudad
+215.	<<"Ingrese la edad el usuario: "
+216.	>>edad
+217.	<<"Ingrese el correo electrónico del usuario: "
+
+218.	cadena<--"Resumen de datos:"+"\n"
+219.	cadena<--cadena+"Usuario:"+nombreU+"\n"+"Ciudad de residencia:"+ciudad+
+220.		"\n"+"Edad:"+edad+"\n"+"Correo electrónico:"+correp+"\n"
+221.	<<cadena
+222.fin funcion crearInstagram
+
+223.funcion crearFlickr() : x
+224.	nombre, x(100)[(A-Z),(a-z),(BS)]
+225.	correo, x(100)[(A-Z),(a-z),(BS)]
+226.	cadena, x(100)[(A-Z),(a-z),(BS)] <-- ""
+227.	<< Ingrese su nombre de usuario
+228.	>> nombre
+229.	<< Ingrese su correo electronico
+230.	>> correo
+231.	cadena <-- cadena + Resumen de cuenta creada: + "\n" +
+232.		   Creando Flickr + "\n"
+233.		   Usuario: + nombre + "\n"
+234.		   Correo: + correo + "\n"
+235.fin funcion crearFlickr
+	
+	
